@@ -1,4 +1,4 @@
-module github.com/netbox-community/go-netbox
+module github.com/sklirg/go-netbox
 
 go 1.18
 
