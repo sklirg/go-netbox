@@ -32,7 +32,7 @@ import (
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 
-	"github.com/netbox-community/go-netbox/netbox/models"
+	"github.com/sklirg/go-netbox/netbox/models"
 )
 
 // WirelessWirelessLanGroupsListReader is a Reader for the WirelessWirelessLanGroupsList structure.
