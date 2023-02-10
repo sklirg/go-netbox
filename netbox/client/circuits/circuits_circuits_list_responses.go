@@ -100,6 +100,11 @@ func (o *CircuitsCircuitsListOK) IsCode(code int) bool {
 	return code == 200
 }
 
+// Code gets the status code for the circuits circuits list o k response
+func (o *CircuitsCircuitsListOK) Code() int {
+	return 200
+}
+
 func (o *CircuitsCircuitsListOK) Error() string {
 	return fmt.Sprintf("[GET /circuits/circuits/][%d] circuitsCircuitsListOK  %+v", 200, o.Payload)
 }
@@ -142,11 +147,6 @@ type CircuitsCircuitsListDefault struct {
 	Payload interface{}
 }
 
-// Code gets the status code for the circuits circuits list default response
-func (o *CircuitsCircuitsListDefault) Code() int {
-	return o._statusCode
-}
-
 // IsSuccess returns true when this circuits circuits list default response has a 2xx status code
 func (o *CircuitsCircuitsListDefault) IsSuccess() bool {
 	return o._statusCode/100 == 2
@@ -170,6 +170,11 @@ func (o *CircuitsCircuitsListDefault) IsServerError() bool {
 // IsCode returns true when this circuits circuits list default response a status code equal to that given
 func (o *CircuitsCircuitsListDefault) IsCode(code int) bool {
 	return o._statusCode == code
+}
+
+// Code gets the status code for the circuits circuits list default response
+func (o *CircuitsCircuitsListDefault) Code() int {
+	return o._statusCode
 }
 
 func (o *CircuitsCircuitsListDefault) Error() string {

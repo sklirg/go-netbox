@@ -95,6 +95,11 @@ func (o *WirelessWirelessLansBulkPartialUpdateOK) IsCode(code int) bool {
 	return code == 200
 }
 
+// Code gets the status code for the wireless wireless lans bulk partial update o k response
+func (o *WirelessWirelessLansBulkPartialUpdateOK) Code() int {
+	return 200
+}
+
 func (o *WirelessWirelessLansBulkPartialUpdateOK) Error() string {
 	return fmt.Sprintf("[PATCH /wireless/wireless-lans/][%d] wirelessWirelessLansBulkPartialUpdateOK  %+v", 200, o.Payload)
 }
@@ -137,11 +142,6 @@ type WirelessWirelessLansBulkPartialUpdateDefault struct {
 	Payload interface{}
 }
 
-// Code gets the status code for the wireless wireless lans bulk partial update default response
-func (o *WirelessWirelessLansBulkPartialUpdateDefault) Code() int {
-	return o._statusCode
-}
-
 // IsSuccess returns true when this wireless wireless lans bulk partial update default response has a 2xx status code
 func (o *WirelessWirelessLansBulkPartialUpdateDefault) IsSuccess() bool {
 	return o._statusCode/100 == 2
@@ -165,6 +165,11 @@ func (o *WirelessWirelessLansBulkPartialUpdateDefault) IsServerError() bool {
 // IsCode returns true when this wireless wireless lans bulk partial update default response a status code equal to that given
 func (o *WirelessWirelessLansBulkPartialUpdateDefault) IsCode(code int) bool {
 	return o._statusCode == code
+}
+
+// Code gets the status code for the wireless wireless lans bulk partial update default response
+func (o *WirelessWirelessLansBulkPartialUpdateDefault) Code() int {
+	return o._statusCode
 }
 
 func (o *WirelessWirelessLansBulkPartialUpdateDefault) Error() string {

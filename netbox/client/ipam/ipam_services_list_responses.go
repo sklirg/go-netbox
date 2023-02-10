@@ -100,6 +100,11 @@ func (o *IpamServicesListOK) IsCode(code int) bool {
 	return code == 200
 }
 
+// Code gets the status code for the ipam services list o k response
+func (o *IpamServicesListOK) Code() int {
+	return 200
+}
+
 func (o *IpamServicesListOK) Error() string {
 	return fmt.Sprintf("[GET /ipam/services/][%d] ipamServicesListOK  %+v", 200, o.Payload)
 }
@@ -142,11 +147,6 @@ type IpamServicesListDefault struct {
 	Payload interface{}
 }
 
-// Code gets the status code for the ipam services list default response
-func (o *IpamServicesListDefault) Code() int {
-	return o._statusCode
-}
-
 // IsSuccess returns true when this ipam services list default response has a 2xx status code
 func (o *IpamServicesListDefault) IsSuccess() bool {
 	return o._statusCode/100 == 2
@@ -170,6 +170,11 @@ func (o *IpamServicesListDefault) IsServerError() bool {
 // IsCode returns true when this ipam services list default response a status code equal to that given
 func (o *IpamServicesListDefault) IsCode(code int) bool {
 	return o._statusCode == code
+}
+
+// Code gets the status code for the ipam services list default response
+func (o *IpamServicesListDefault) Code() int {
+	return o._statusCode
 }
 
 func (o *IpamServicesListDefault) Error() string {

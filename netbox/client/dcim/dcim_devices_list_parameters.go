@@ -164,6 +164,12 @@ type DcimDevicesListParams struct {
 	// DeviceBays.
 	DeviceBays *string
 
+	// DeviceType.
+	DeviceType *string
+
+	// DeviceTypen.
+	DeviceTypen *string
+
 	// DeviceTypeID.
 	DeviceTypeID *string
 
@@ -912,6 +918,28 @@ func (o *DcimDevicesListParams) WithDeviceBays(deviceBays *string) *DcimDevicesL
 // SetDeviceBays adds the deviceBays to the dcim devices list params
 func (o *DcimDevicesListParams) SetDeviceBays(deviceBays *string) {
 	o.DeviceBays = deviceBays
+}
+
+// WithDeviceType adds the deviceType to the dcim devices list params
+func (o *DcimDevicesListParams) WithDeviceType(deviceType *string) *DcimDevicesListParams {
+	o.SetDeviceType(deviceType)
+	return o
+}
+
+// SetDeviceType adds the deviceType to the dcim devices list params
+func (o *DcimDevicesListParams) SetDeviceType(deviceType *string) {
+	o.DeviceType = deviceType
+}
+
+// WithDeviceTypen adds the deviceTypen to the dcim devices list params
+func (o *DcimDevicesListParams) WithDeviceTypen(deviceTypen *string) *DcimDevicesListParams {
+	o.SetDeviceTypen(deviceTypen)
+	return o
+}
+
+// SetDeviceTypen adds the deviceTypeN to the dcim devices list params
+func (o *DcimDevicesListParams) SetDeviceTypen(deviceTypen *string) {
+	o.DeviceTypen = deviceTypen
 }
 
 // WithDeviceTypeID adds the deviceTypeID to the dcim devices list params
@@ -2763,6 +2791,40 @@ func (o *DcimDevicesListParams) WriteToRequest(r runtime.ClientRequest, reg strf
 		if qDeviceBays != "" {
 
 			if err := r.SetQueryParam("device_bays", qDeviceBays); err != nil {
+				return err
+			}
+		}
+	}
+
+	if o.DeviceType != nil {
+
+		// query param device_type
+		var qrDeviceType string
+
+		if o.DeviceType != nil {
+			qrDeviceType = *o.DeviceType
+		}
+		qDeviceType := qrDeviceType
+		if qDeviceType != "" {
+
+			if err := r.SetQueryParam("device_type", qDeviceType); err != nil {
+				return err
+			}
+		}
+	}
+
+	if o.DeviceTypen != nil {
+
+		// query param device_type__n
+		var qrDeviceTypen string
+
+		if o.DeviceTypen != nil {
+			qrDeviceTypen = *o.DeviceTypen
+		}
+		qDeviceTypen := qrDeviceTypen
+		if qDeviceTypen != "" {
+
+			if err := r.SetQueryParam("device_type__n", qDeviceTypen); err != nil {
 				return err
 			}
 		}

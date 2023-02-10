@@ -11500,6 +11500,13 @@
                         "type": "string"
                     },
                     {
+                        "name": "device_type",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
                         "name": "device_type_id",
                         "in": "query",
                         "description": "",
@@ -12131,6 +12138,13 @@
                     },
                     {
                         "name": "manufacturer__n",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "device_type__n",
                         "in": "query",
                         "description": "",
                         "required": false,
@@ -74167,6 +74181,15 @@
                                 "QSFP56 (200GE)",
                                 "QSFP-DD (400GE)",
                                 "OSFP (400GE)",
+                                "1000BASE-KX (1GE)",
+                                "10GBASE-KR (10GE)",
+                                "10GBASE-KX4 (10GE)",
+                                "25GBASE-KR (25GE)",
+                                "40GBASE-KR4 (40GE)",
+                                "50GBASE-KR (50GE)",
+                                "100GBASE-KP4 (100GE)",
+                                "100GBASE-KR2 (100GE)",
+                                "100GBASE-KR4 (100GE)",
                                 "IEEE 802.11a",
                                 "IEEE 802.11b/g",
                                 "IEEE 802.11n",
@@ -74262,6 +74285,15 @@
                                 "200gbase-x-qsfp56",
                                 "400gbase-x-qsfpdd",
                                 "400gbase-x-osfp",
+                                "1000base-kx",
+                                "10gbase-kr",
+                                "10gbase-kx4",
+                                "25gbase-kr",
+                                "40gbase-kr4",
+                                "50gbase-kr",
+                                "100gbase-kp4",
+                                "100gbase-kr2",
+                                "100gbase-kr4",
                                 "ieee802.11a",
                                 "ieee802.11g",
                                 "ieee802.11n",
@@ -74493,6 +74525,15 @@
                         "200gbase-x-qsfp56",
                         "400gbase-x-qsfpdd",
                         "400gbase-x-osfp",
+                        "1000base-kx",
+                        "10gbase-kr",
+                        "10gbase-kx4",
+                        "25gbase-kr",
+                        "40gbase-kr4",
+                        "50gbase-kr",
+                        "100gbase-kp4",
+                        "100gbase-kr2",
+                        "100gbase-kr4",
                         "ieee802.11a",
                         "ieee802.11g",
                         "ieee802.11n",
@@ -74958,6 +74999,15 @@
                                 "QSFP56 (200GE)",
                                 "QSFP-DD (400GE)",
                                 "OSFP (400GE)",
+                                "1000BASE-KX (1GE)",
+                                "10GBASE-KR (10GE)",
+                                "10GBASE-KX4 (10GE)",
+                                "25GBASE-KR (25GE)",
+                                "40GBASE-KR4 (40GE)",
+                                "50GBASE-KR (50GE)",
+                                "100GBASE-KP4 (100GE)",
+                                "100GBASE-KR2 (100GE)",
+                                "100GBASE-KR4 (100GE)",
                                 "IEEE 802.11a",
                                 "IEEE 802.11b/g",
                                 "IEEE 802.11n",
@@ -75053,6 +75103,15 @@
                                 "200gbase-x-qsfp56",
                                 "400gbase-x-qsfpdd",
                                 "400gbase-x-osfp",
+                                "1000base-kx",
+                                "10gbase-kr",
+                                "10gbase-kx4",
+                                "25gbase-kr",
+                                "40gbase-kr4",
+                                "50gbase-kr",
+                                "100gbase-kp4",
+                                "100gbase-kr2",
+                                "100gbase-kr4",
                                 "ieee802.11a",
                                 "ieee802.11g",
                                 "ieee802.11n",
@@ -75929,6 +75988,15 @@
                         "200gbase-x-qsfp56",
                         "400gbase-x-qsfpdd",
                         "400gbase-x-osfp",
+                        "1000base-kx",
+                        "10gbase-kr",
+                        "10gbase-kx4",
+                        "25gbase-kr",
+                        "40gbase-kr4",
+                        "50gbase-kr",
+                        "100gbase-kp4",
+                        "100gbase-kr2",
+                        "100gbase-kr4",
                         "ieee802.11a",
                         "ieee802.11g",
                         "ieee802.11n",
@@ -83081,7 +83149,8 @@
                 },
                 "time_zone": {
                     "title": "Time zone",
-                    "type": "string"
+                    "type": "string",
+                    "x-nullable": true
                 },
                 "description": {
                     "title": "Description",
@@ -83253,7 +83322,8 @@
                 },
                 "time_zone": {
                     "title": "Time zone",
-                    "type": "string"
+                    "type": "string",
+                    "x-nullable": true
                 },
                 "description": {
                     "title": "Description",
@@ -84783,7 +84853,6 @@
                 "created_by": {
                     "title": "Created by",
                     "type": "integer",
-                    "default": 1,
                     "x-nullable": true
                 },
                 "kind": {
@@ -88025,7 +88094,8 @@
                 },
                 "scope_type": {
                     "title": "Scope type",
-                    "type": "string"
+                    "type": "string",
+                    "x-nullable": true
                 },
                 "scope_id": {
                     "title": "Scope id",

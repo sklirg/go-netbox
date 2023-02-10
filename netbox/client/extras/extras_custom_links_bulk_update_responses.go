@@ -95,6 +95,11 @@ func (o *ExtrasCustomLinksBulkUpdateOK) IsCode(code int) bool {
 	return code == 200
 }
 
+// Code gets the status code for the extras custom links bulk update o k response
+func (o *ExtrasCustomLinksBulkUpdateOK) Code() int {
+	return 200
+}
+
 func (o *ExtrasCustomLinksBulkUpdateOK) Error() string {
 	return fmt.Sprintf("[PUT /extras/custom-links/][%d] extrasCustomLinksBulkUpdateOK  %+v", 200, o.Payload)
 }
@@ -137,11 +142,6 @@ type ExtrasCustomLinksBulkUpdateDefault struct {
 	Payload interface{}
 }
 
-// Code gets the status code for the extras custom links bulk update default response
-func (o *ExtrasCustomLinksBulkUpdateDefault) Code() int {
-	return o._statusCode
-}
-
 // IsSuccess returns true when this extras custom links bulk update default response has a 2xx status code
 func (o *ExtrasCustomLinksBulkUpdateDefault) IsSuccess() bool {
 	return o._statusCode/100 == 2
@@ -165,6 +165,11 @@ func (o *ExtrasCustomLinksBulkUpdateDefault) IsServerError() bool {
 // IsCode returns true when this extras custom links bulk update default response a status code equal to that given
 func (o *ExtrasCustomLinksBulkUpdateDefault) IsCode(code int) bool {
 	return o._statusCode == code
+}
+
+// Code gets the status code for the extras custom links bulk update default response
+func (o *ExtrasCustomLinksBulkUpdateDefault) Code() int {
+	return o._statusCode
 }
 
 func (o *ExtrasCustomLinksBulkUpdateDefault) Error() string {
